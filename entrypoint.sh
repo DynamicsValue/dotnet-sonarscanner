@@ -8,6 +8,7 @@
 # sonarOrganisation = $6
 # beginArguments = $7
 # endArguments = $8
+# restoreCommand = $9
 
 set -eu
 
@@ -37,6 +38,11 @@ then
 fi
 
 sh -c "$begin_cmd"
+
+if [ -n "$9" ]
+then
+    sh -c "${9//[$'\t\r\n']}"
+fi
 
 sh -c "${1//[$'\t\r\n']:?Please set the buildCommand.}"
 

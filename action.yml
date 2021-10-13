@@ -3,6 +3,9 @@ description: "Run analysis for dotnet core via dotnet-sonarscanner"
 author: "Joshua Duffy <mail@joshuaduffy.org>"
 
 inputs:
+  restoreCommand:
+    description: "Command to invoke to restore packages. Optional"
+    required: false
   buildCommand:
     description: "Command to invoke build"
     required: true
@@ -28,6 +31,7 @@ inputs:
   endArguments:
     description: "Arguments to append to the end command"
     required: false
+  
 
 runs:
   using: "docker"
@@ -41,6 +45,7 @@ runs:
     - ${{ inputs.sonarOrganisation }}
     - ${{ inputs.beginArguments }}
     - ${{ inputs.endArguments }}
+    - ${{ inputs.restoreCommand }}
 
 branding:
   icon: 'check'

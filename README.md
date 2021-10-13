@@ -27,6 +27,9 @@ _Currently does not support username/password authentication and presumes you ar
 ## Inputs
 
 ```yaml
+restoreCommand:
+  description: "Command to invoke to restore packages. Optional"
+  required: false
 buildCommand:
   description: "Command to invoke build"
   required: true
