@@ -10,6 +10,7 @@ _Currently does not support username/password authentication and presumes you ar
 - name: Sonarscanner for dotnet
   uses: Secbyte/dotnet-sonarscanner@v2.3
   with:
+    restoreCommand: dotnet restore .
     buildCommand: dotnet build .
     testCommand: dotnet test .
     projectKey: a-project-key
