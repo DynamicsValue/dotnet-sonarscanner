@@ -1,6 +1,10 @@
 # CHANGELOG
 ---------------------------------------------------------------------
 
+## [2.4.4]
+
+Use ubuntu base image
+
 ## [2.4.3]
 
 Potential fix by not using custom package repositories and removing gpg instruction
