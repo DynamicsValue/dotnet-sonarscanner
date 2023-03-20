@@ -62,3 +62,8 @@ endArguments:
 
 * `SONAR_TOKEN` - Token from SonarCloud with ExecuteAnalysis permissions
 * `GITHUB_TOKEN` - GitHub Token
+
+
+#### Full dotnet docker images tags:
+
+https://mcr.microsoft.com/v2/dotnet/sdk/tags/list
