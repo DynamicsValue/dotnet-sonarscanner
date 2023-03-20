@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0
+FROM mcr.microsoft.com/dotnet/sdk:5.0-focal
 
 LABEL "com.github.actions.name"="dotnet-sonarscanner"
 LABEL "com.github.actions.description"="sonarscanner for dotnet core"
