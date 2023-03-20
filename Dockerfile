@@ -9,11 +9,14 @@ LABEL "repository"="https://github.com/Secbyte/dotnet-sonarscanner"
 LABEL "homepage"="https://github.com/Secbyte/dotnet-sonarscanner"
 LABEL "maintainer"="Joshua Duffy <mail@joshuaduffy.org>"
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends default-jre apt-transport-https mono-complete && \
-    apt-get install -y --no-install-recommends python3 python3-distutils python3-pip python3-setuptools dotnet-sdk-6.0 && \
-    apt-get autoremove -y && \
-    dotnet tool install dotnet-sonarscanner --tool-path . --version 5.12.0
+RUN apt-get update && apt-get install -y wget apt-transport-https
+RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+RUN dpkg -i packages-microsoft-prod.deb
+RUN rm packages-microsoft-prod.deb
+RUN apt-get update
+RUN apt-get install -y dotnet-sdk-6.0
+
+RUN dotnet tool install dotnet-sonarscanner --tool-path . --version 5.12.0
 
 ADD entrypoint.sh /entrypoint.sh
 

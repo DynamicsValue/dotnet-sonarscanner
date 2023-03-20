@@ -1,6 +1,10 @@
 # CHANGELOG
 ---------------------------------------------------------------------
 
+## [2.4.5]
+
+Install .net6.0 from Microsoft's PMR
+
 ## [2.4.4]
 
 Use ubuntu base image
