@@ -1,6 +1,10 @@
 # CHANGELOG
 ---------------------------------------------------------------------
 
+## [2.4.3]
+
+Potential fix by not using custom package repositories and removing gpg instruction
+
 ## [2.4.2]
 
 Set base image to net5.0 (needed by dotnet-sonarscanner) and install net6.0 sdk alongside it
