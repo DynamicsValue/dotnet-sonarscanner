@@ -20,7 +20,7 @@ RUN wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor 
     apt-get install -y --no-install-recommends python3 python3-distutils python3-pip python3-setuptools && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* && \
     apt-get autoremove -y && \
-    dotnet tool install dotnet-sonarscanner --tool-path . --version 4.7.1
+    dotnet tool install dotnet-sonarscanner --tool-path . --version 5.12.0
 
 ADD entrypoint.sh /entrypoint.sh
 

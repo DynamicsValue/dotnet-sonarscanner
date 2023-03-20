@@ -37,6 +37,8 @@ then
    end_cmd="$end_cmd $8"
 fi
 
+sh -c "dotnet --info"
+
 sh -c "$begin_cmd"
 
 if [ -n "$9" ]
