@@ -16,7 +16,7 @@ RUN rm packages-microsoft-prod.deb
 RUN apt-get update
 RUN apt-get install -y dotnet-sdk-6.0
 
-RUN apt-get install -y default-jre
+RUN apt-get install -y openjdk-17-jdk openjdk-17-jre
 RUN dotnet tool install dotnet-sonarscanner --tool-path . --version 5.12.0
 
 ADD entrypoint.sh /entrypoint.sh
