@@ -14,7 +14,7 @@ RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-p
 RUN dpkg -i packages-microsoft-prod.deb
 RUN rm packages-microsoft-prod.deb
 RUN apt-get update
-RUN apt-get install -y dotnet-sdk-6.0
+RUN apt-get install -y dotnet-sdk-8.0
 
 RUN apt-get install -y openjdk-17-jdk openjdk-17-jre
 RUN apt-get install -y nodejs npm
