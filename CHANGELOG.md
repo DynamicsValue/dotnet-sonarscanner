@@ -1,9 +1,14 @@
 # CHANGELOG
 ---------------------------------------------------------------------
 
+## [2.6.0]
+
+Upgrade to net8.0
+
 ## [2.4.6]
 
 Add Java RE needed for dotnet sonar scanner execution
+
 ## [2.4.5]
 
 Install .net6.0 from Microsoft's PMR
